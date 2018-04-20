@@ -66,7 +66,7 @@ class BotAPI:
 
             cputemp_raw = os.popen('vcgencmd measure_temp').readline()
             cputemp = cputemp_raw.replace("temp=", "").replace("\n", "")
-            rpi_specific = "Temp CPU: {} C\n".format(int(cputemp))
+            rpi_specific = "Temp CPU: {}\n".format(cputemp)
         except Exception as e:
             rpi_specific = ''
 
