@@ -73,7 +73,7 @@ class BotAPI:
         try:
             import Adafruit_DHT
             humidity, temperature = Adafruit_DHT.read_retry(22, 2)
-            dht_specific = "Air temp: {} C\n" \
+            dht_specific = "--------\nAir temp: {} C\n" \
                            "Humidity: {} %\n".format(int(temperature), int(humidity))
         except Exception as e:
             dht_specific = ''
